@@ -6,13 +6,6 @@
 *.db-shm
 *.db-wal
 
-# Output files
-gijiroku_all.txt
-features.json
-miyako-file-ids.json
-vectorstore_id.txt
-miyakojima_council_members_20years.json
-
 # Output directories
 output/
 sessions/

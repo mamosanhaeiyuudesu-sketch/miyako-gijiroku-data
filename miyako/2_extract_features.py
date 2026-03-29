@@ -26,8 +26,9 @@ except ImportError:
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-INPUT_PATH  = Path(__file__).parent / "gijiroku_all.txt"
-OUTPUT_PATH = Path(__file__).parent / "features.json"
+_DATA_DIR   = Path(__file__).parent.parent / "miyako_data"
+INPUT_PATH  = _DATA_DIR / "output" / "gijiroku_all.txt"
+OUTPUT_PATH = _DATA_DIR / "output" / "features.json"
 
 # 出力する特徴語の数
 TOP_N = 30

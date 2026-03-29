@@ -14,8 +14,9 @@ import re
 import sys
 from pathlib import Path
 
-INPUT_PATH   = Path(__file__).parent / "gijiroku_all.txt"
-OUTPUT_DIR   = Path(__file__).parent / "sessions"
+_DATA_DIR    = Path(__file__).parent.parent / "miyako_data"
+INPUT_PATH   = _DATA_DIR / "output" / "gijiroku_all.txt"
+OUTPUT_DIR   = _DATA_DIR / "sessions"
 
 HEADER_RE = re.compile(r"^==== (.+?) \d{4}-\d{2}-\d{2}(?:〜\d{4}-\d{2}-\d{2})? ====$")
 

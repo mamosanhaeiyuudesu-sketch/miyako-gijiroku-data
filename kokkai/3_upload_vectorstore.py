@@ -23,8 +23,9 @@ except ImportError:
     print("openai が必要です: pip install openai", file=sys.stderr)
     sys.exit(1)
 
-INPUT_PATH  = Path(__file__).parent / "kokkai_all.txt"
-ID_PATH     = Path(__file__).parent / "vectorstore_id.txt"
+_DATA_DIR   = Path(__file__).parent.parent / "kokkai_data"
+INPUT_PATH  = _DATA_DIR / "output" / "kokkai_all.txt"
+ID_PATH     = _DATA_DIR / "output" / "vectorstore_id.txt"
 
 VECTOR_STORE_NAME = "国会会議録"
 

@@ -30,9 +30,10 @@ from collections import defaultdict, Counter
 from pathlib import Path
 
 # ─── ファイルパス ─────────────────────────────────────────
-INPUT_TXT    = Path("gijiroku_all.txt")
-MEMBERS_JSON = Path("miyakojima_council_members_20years.json")
-OUTPUT_DIR   = Path("output")
+_DATA_DIR    = Path(__file__).parent.parent / "miyako_data"
+INPUT_TXT    = _DATA_DIR / "output" / "gijiroku_all.txt"
+MEMBERS_JSON = _DATA_DIR / "output" / "miyakojima_council_members_20years.json"
+OUTPUT_DIR   = _DATA_DIR / "output"
 
 # ─── 設定 ────────────────────────────────────────────────
 MIN_UTTERANCES = 50   # これ未満の発話セグメント数の話者を除外

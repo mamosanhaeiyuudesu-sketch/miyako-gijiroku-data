@@ -23,8 +23,9 @@ import re
 import sys
 from pathlib import Path
 
-MEETINGS_DIR = Path(__file__).parent / "meetings"
-OUTPUT_PATH  = Path(__file__).parent / "kokkai_all.txt"
+_DATA_DIR    = Path(__file__).parent.parent / "kokkai_data"
+MEETINGS_DIR = _DATA_DIR / "meetings"
+OUTPUT_PATH  = _DATA_DIR / "output" / "kokkai_all.txt"
 
 
 def make_header(meeting: dict) -> str:

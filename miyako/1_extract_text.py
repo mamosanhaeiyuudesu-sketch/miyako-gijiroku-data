@@ -22,8 +22,9 @@ except ImportError:
     print("PyMuPDF が必要です: pip install pymupdf", file=sys.stderr)
     sys.exit(1)
 
-GIJIROKU_DIR = Path(__file__).parent / "gijiroku"
-OUTPUT_PATH  = Path(__file__).parent / "gijiroku_all.txt"
+_DATA_DIR    = Path(__file__).parent.parent / "miyako_data"
+GIJIROKU_DIR = _DATA_DIR / "gijiroku"
+OUTPUT_PATH  = _DATA_DIR / "output" / "gijiroku_all.txt"
 
 _ZEN_TO_HAN = str.maketrans("０１２３４５６７８９", "0123456789")
 GENGOU_BASE = {"明治": 1868, "大正": 1912, "昭和": 1926, "平成": 1989, "令和": 2019}

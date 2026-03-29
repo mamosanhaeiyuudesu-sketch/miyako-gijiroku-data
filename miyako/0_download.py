@@ -3,8 +3,11 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from pathlib import Path
 
-def download_pdfs(url, save_dir="gijiroku"):
+_DEFAULT_SAVE_DIR = str(Path(__file__).parent.parent / "miyako_data" / "gijiroku")
+
+def download_pdfs(url, save_dir=_DEFAULT_SAVE_DIR):
     # 保存用ディレクトリの作成
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)

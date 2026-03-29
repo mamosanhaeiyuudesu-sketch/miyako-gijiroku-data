@@ -14,8 +14,9 @@ import re
 import sys
 from pathlib import Path
 
-INPUT_PATH = Path(__file__).parent / "kokkai_all.txt"
-OUTPUT_DIR = Path(__file__).parent / "sessions"
+_DATA_DIR  = Path(__file__).parent.parent / "kokkai_data"
+INPUT_PATH = _DATA_DIR / "output" / "kokkai_all.txt"
+OUTPUT_DIR = _DATA_DIR / "sessions"
 
 # ==== 第213回 衆議院 本会議 第1号 2024-01-26 ====
 HEADER_RE = re.compile(r"^==== (.+?) \d{4}-\d{2}-\d{2} ====$")

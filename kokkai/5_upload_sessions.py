@@ -32,9 +32,10 @@ except ImportError:
     print("openai が必要です: pip install openai", file=sys.stderr)
     sys.exit(1)
 
-SESSIONS_DIR  = Path(__file__).parent / "sessions"
-VS_ID_PATH    = Path(__file__).parent / "vectorstore_id.txt"
-MAPPING_PATH  = Path(__file__).parent / "kokkai-file-ids.json"
+_DATA_DIR     = Path(__file__).parent.parent / "kokkai_data"
+SESSIONS_DIR  = _DATA_DIR / "sessions"
+VS_ID_PATH    = _DATA_DIR / "output" / "vectorstore_id.txt"
+MAPPING_PATH  = _DATA_DIR / "output" / "kokkai-file-ids.json"
 
 
 def load_mapping() -> dict:

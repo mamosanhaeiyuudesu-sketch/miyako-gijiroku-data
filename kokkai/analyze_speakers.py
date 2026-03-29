@@ -28,9 +28,10 @@ import sys
 from collections import defaultdict, Counter
 from pathlib import Path
 
-INPUT_TXT    = Path(__file__).parent / "kokkai_all.txt"
-MEETINGS_DIR = Path(__file__).parent / "meetings"
-OUTPUT_DIR   = Path(__file__).parent / "output"
+_DATA_DIR    = Path(__file__).parent.parent / "kokkai_data"
+INPUT_TXT    = _DATA_DIR / "output" / "kokkai_all.txt"
+MEETINGS_DIR = _DATA_DIR / "meetings"
+OUTPUT_DIR   = _DATA_DIR / "output"
 
 MIN_UTTERANCES = 10   # 宮古島（50）より少ない：国会は1会期あたり発言が少ない議員も多い
 TOP_N_WORDS    = 200

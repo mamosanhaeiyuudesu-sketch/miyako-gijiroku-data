@@ -7,12 +7,12 @@
 *.db-wal
 
 # Output directories
-output/
-sessions/
-gijiroku/
+miyako_data/output/
+miyako_data/sessions/
+miyako_data/gijiroku/
 
 # kokkai pipeline generated files
-kokkai/meetings/
-kokkai/sessions/
-kokkai/output/
-kokkai/kokkai_all.txt
+kokkai_data/meetings/
+kokkai_data/sessions/
+kokkai_data/output/
+kokkai_data/kokkai_all.txt

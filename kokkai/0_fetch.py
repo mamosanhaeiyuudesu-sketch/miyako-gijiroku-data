@@ -37,7 +37,7 @@ except ImportError:
     sys.exit(1)
 
 API_BASE   = "https://kokkai.ndl.go.jp/api"
-SAVE_DIR   = Path(__file__).parent / "meetings"
+SAVE_DIR   = Path(__file__).parent.parent / "kokkai_data" / "meetings"
 MAX_RECORDS = 100    # APIの最大取得件数
 SLEEP_SEC  = 0.5     # リクエスト間隔（秒）
 

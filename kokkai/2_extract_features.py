@@ -25,8 +25,9 @@ except ImportError:
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-INPUT_PATH  = Path(__file__).parent / "kokkai_all.txt"
-OUTPUT_PATH = Path(__file__).parent / "features.json"
+_DATA_DIR   = Path(__file__).parent.parent / "kokkai_data"
+INPUT_PATH  = _DATA_DIR / "output" / "kokkai_all.txt"
+OUTPUT_PATH = _DATA_DIR / "output" / "features.json"
 
 TOP_N = 30
 
